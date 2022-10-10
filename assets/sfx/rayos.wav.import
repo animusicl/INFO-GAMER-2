@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/rayos.wav-74e2c34a98cf88e15862a386fef8bbeb.sample"
+
+[deps]
+
+source_file="res://assets/sfx/rayos.wav"
+dest_files=[ "res://.import/rayos.wav-74e2c34a98cf88e15862a386fef8bbeb.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,218 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://game/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/floor/large_floor.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/platform/small_platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/platform/platform.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/sky/big_sky_platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/sky/sky_platform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game/sky/small_sky_platform.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/objetos/PowerUp/PowerUpFly.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/enemies/Cloud.tscn" type="PackedScene" id=10]
+[ext_resource path="res://game/enemies/Wingman.tscn" type="PackedScene" id=11]
+[ext_resource path="res://game/objetos/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://game/objetos/Key.tscn" type="PackedScene" id=13]
+[ext_resource path="res://game/objetos/GoldCoin.tscn" type="PackedScene" id=14]
+
+[node name="Nivel_7" instance=ExtResource( 1 )]
+nivel_actual = "res://game/niveles/Nivel_7.tscn"
+
+[node name="platform" parent="RegularPlatforms" index="0" instance=ExtResource( 5 )]
+position = Vector2( 1437.82, 795.432 )
+
+[node name="platform2" parent="RegularPlatforms" index="1" instance=ExtResource( 5 )]
+position = Vector2( 1806.08, 537.455 )
+
+[node name="sky_platform" parent="RegularPlatforms" index="2" instance=ExtResource( 7 )]
+position = Vector2( 2262.98, -436.691 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform2" parent="RegularPlatforms" index="3" instance=ExtResource( 7 )]
+position = Vector2( 2940.8, -406.071 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform3" parent="RegularPlatforms" index="4" instance=ExtResource( 7 )]
+position = Vector2( 3303.94, 88.3296 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform8" parent="RegularPlatforms" index="5" instance=ExtResource( 7 )]
+position = Vector2( 2757.48, 215.958 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform4" parent="RegularPlatforms" index="6" instance=ExtResource( 7 )]
+position = Vector2( 3734.75, 365.594 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform5" parent="RegularPlatforms" index="7" instance=ExtResource( 7 )]
+position = Vector2( 4847.01, -183.988 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform6" parent="RegularPlatforms" index="8" instance=ExtResource( 7 )]
+position = Vector2( 5801.92, 26.7657 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="sky_platform7" parent="RegularPlatforms" index="9" instance=ExtResource( 7 )]
+position = Vector2( 5538.62, 638.499 )
+scale = Vector2( 0.6, 0.8 )
+script = null
+
+[node name="small_platform" parent="ShortPlatforms" index="0" instance=ExtResource( 4 )]
+position = Vector2( 1431.52, 305.554 )
+
+[node name="small_platform2" parent="ShortPlatforms" index="1" instance=ExtResource( 4 )]
+position = Vector2( 1730.89, 90.366 )
+
+[node name="small_sky_platform" parent="ShortPlatforms" index="2" instance=ExtResource( 8 )]
+position = Vector2( 1166.74, -351.89 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform7" parent="ShortPlatforms" index="3" instance=ExtResource( 8 )]
+position = Vector2( 1431.94, -126.863 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform2" parent="ShortPlatforms" index="4" instance=ExtResource( 8 )]
+position = Vector2( 1995.2, -147.707 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform3" parent="ShortPlatforms" index="5" instance=ExtResource( 8 )]
+position = Vector2( 1390.51, -559.896 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform4" parent="ShortPlatforms" index="6" instance=ExtResource( 8 )]
+position = Vector2( 3957.75, -352.027 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform5" parent="ShortPlatforms" index="7" instance=ExtResource( 8 )]
+position = Vector2( 6045.05, 780 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="small_sky_platform6" parent="ShortPlatforms" index="8" instance=ExtResource( 8 )]
+position = Vector2( 7084.76, 84.1079 )
+scale = Vector2( 1.5, 1.5 )
+
+[node name="big_sky_platform" parent="LargePlatforms" index="0" instance=ExtResource( 6 )]
+position = Vector2( 4583.71, 753.705 )
+
+[node name="large_floor" parent="Floors" index="0" instance=ExtResource( 2 )]
+position = Vector2( 735.823, 1039.57 )
+
+[node name="Cloud" parent="Enemies" index="0" instance=ExtResource( 10 )]
+position = Vector2( 1547.95, -1070.1 )
+
+[node name="Cloud2" parent="Enemies" index="1" instance=ExtResource( 10 )]
+position = Vector2( 3000.96, -934.801 )
+
+[node name="Cloud3" parent="Enemies" index="2" instance=ExtResource( 10 )]
+position = Vector2( 4693.4, -751.024 )
+
+[node name="Wingman" parent="Enemies" index="3" instance=ExtResource( 11 )]
+position = Vector2( 2575.67, -90.3515 )
+
+[node name="Wingman5" parent="Enemies" index="4" instance=ExtResource( 11 )]
+position = Vector2( 1972.92, 226.438 )
+
+[node name="Wingman6" parent="Enemies" index="5" instance=ExtResource( 11 )]
+position = Vector2( 1731.01, -345.096 )
+
+[node name="Wingman2" parent="Enemies" index="6" instance=ExtResource( 11 )]
+position = Vector2( 4348.5, -120.608 )
+
+[node name="Wingman7" parent="Enemies" index="7" instance=ExtResource( 11 )]
+position = Vector2( 4580.24, 704.851 )
+
+[node name="Wingman3" parent="Enemies" index="8" instance=ExtResource( 11 )]
+position = Vector2( 5307.69, 70.1941 )
+
+[node name="Wingman4" parent="Enemies" index="9" instance=ExtResource( 11 )]
+position = Vector2( 6672.21, 207.399 )
+
+[node name="GoldenCoin" parent="Coins" index="0" instance=ExtResource( 14 )]
+position = Vector2( 1430.86, 216.84 )
+
+[node name="GoldenCoin6" parent="Coins" index="1" instance=ExtResource( 14 )]
+position = Vector2( 2789.82, 55.8038 )
+
+[node name="GoldenCoin7" parent="Coins" index="2" instance=ExtResource( 14 )]
+position = Vector2( 2699.3, 55.5538 )
+
+[node name="GoldenCoin8" parent="Coins" index="3" instance=ExtResource( 14 )]
+position = Vector2( 2695.05, -31.9757 )
+
+[node name="GoldenCoin9" parent="Coins" index="4" instance=ExtResource( 14 )]
+position = Vector2( 2787.94, -34.9723 )
+
+[node name="GoldenCoin10" parent="Coins" index="5" instance=ExtResource( 14 )]
+position = Vector2( 3217.01, -93.9512 )
+
+[node name="GoldenCoin11" parent="Coins" index="6" instance=ExtResource( 14 )]
+position = Vector2( 3294.92, -90.9546 )
+
+[node name="GoldenCoin12" parent="Coins" index="7" instance=ExtResource( 14 )]
+position = Vector2( 3262.96, -169.87 )
+
+[node name="GoldenCoin13" parent="Coins" index="8" instance=ExtResource( 14 )]
+position = Vector2( 4804.86, -349.696 )
+
+[node name="GoldenCoin14" parent="Coins" index="9" instance=ExtResource( 14 )]
+position = Vector2( 4803.41, -281.912 )
+
+[node name="GoldenCoin15" parent="Coins" index="10" instance=ExtResource( 14 )]
+position = Vector2( 4875.46, -353.956 )
+
+[node name="GoldenCoin16" parent="Coins" index="11" instance=ExtResource( 14 )]
+position = Vector2( 4884.96, -282.474 )
+
+[node name="GoldenCoin17" parent="Coins" index="12" instance=ExtResource( 14 )]
+position = Vector2( 4220.43, 693.733 )
+
+[node name="GoldenCoin18" parent="Coins" index="13" instance=ExtResource( 14 )]
+position = Vector2( 4308.44, 697.733 )
+
+[node name="GoldenCoin19" parent="Coins" index="14" instance=ExtResource( 14 )]
+position = Vector2( 4270.44, 617.733 )
+
+[node name="GoldenCoin20" parent="Coins" index="15" instance=ExtResource( 14 )]
+position = Vector2( 4356.44, 621.733 )
+
+[node name="GoldenCoin2" parent="Coins" index="16" instance=ExtResource( 14 )]
+position = Vector2( 1728.43, 2.78297 )
+
+[node name="GoldenCoin3" parent="Coins" index="17" instance=ExtResource( 14 )]
+position = Vector2( 1410.3, -639.83 )
+
+[node name="GoldenCoin4" parent="Coins" index="18" instance=ExtResource( 14 )]
+position = Vector2( 1161.2, -450.887 )
+
+[node name="GoldenCoin5" parent="Coins" index="19" instance=ExtResource( 14 )]
+position = Vector2( 1426.9, -207.027 )
+
+[node name="Key" parent="Keys" index="0" instance=ExtResource( 13 )]
+position = Vector2( 3947.52, -495.996 )
+
+[node name="Key2" parent="Keys" index="1" instance=ExtResource( 13 )]
+position = Vector2( 4854.57, 672.133 )
+
+[node name="Key3" parent="Keys" index="2" instance=ExtResource( 13 )]
+position = Vector2( 5792.04, -147.779 )
+
+[node name="PowerUp" type="Node" parent="." index="11"]
+
+[node name="PowerUpFly" parent="PowerUp" index="0" instance=ExtResource( 9 )]
+position = Vector2( 3728.28, 245.049 )
+
+[node name="PowerUpFly2" parent="PowerUp" index="1" instance=ExtResource( 9 )]
+position = Vector2( 6053.89, 673.454 )
+
+[node name="Portal" parent="." index="12" instance=ExtResource( 12 )]
+position = Vector2( 7088.33, -117.481 )
+proximo_nivel = "res://game/niveles/Nivel_8.tscn"
+
+[node name="MainCharacter" parent="." index="14"]
+position = Vector2( 694.9, 990.678 )

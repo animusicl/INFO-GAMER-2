@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Enemies/spikeMan_walk2.png" type="Texture" id=1]
+[ext_resource path="res://assets/Enemies/spikeMan_walk1.png" type="Texture" id=2]
+[ext_resource path="res://game/enemies/Spikeman.gd" type="Script" id=3]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "caminar",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24.0021, 4.37061 )
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 37.435
+
+[node name="Spikeman" type="KinematicBody2D" groups=[
+"daño",
+]]
+scale = Vector2( 0.8, 0.8 )
+z_index = 35
+z_as_relative = false
+collision_layer = 9
+collision_mask = 4
+script = ExtResource( 3 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.631373, 0.0627451, 0.631373, 1 )
+position = Vector2( -0.8909, -76.5845 )
+frames = SubResource( 1 )
+animation = "caminar"
+
+[node name="ColisionPies" type="CollisionShape2D" parent="."]
+position = Vector2( 0.92329, -3.31726 )
+shape = SubResource( 2 )
+
+[node name="DetectorVacio" type="RayCast2D" parent="."]
+modulate = Color( 0.396078, 0.254902, 0.0784314, 1 )
+position = Vector2( 55, 0 )
+enabled = true
+collision_mask = 5
+
+[node name="DetectorPared" type="RayCast2D" parent="."]
+modulate = Color( 0.396078, 0.254902, 0.0784314, 1 )
+position = Vector2( 47.9846, -33.6739 )
+enabled = true
+cast_to = Vector2( 40, 0 )
+collision_mask = 4
+
+[node name="DetectorJugador" type="Area2D" parent="."]
+position = Vector2( -0.8909, -76.5845 )
+collision_layer = 32
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectorJugador"]
+position = Vector2( 0, 27.617 )
+shape = SubResource( 3 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DetectorJugador"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 70.1539, 6.60443 )
+polygon = PoolVector2Array( -70.1891, -72.6978, -83.7573, -22.5545, -56.6209, -23.1444 )
+
+[connection signal="body_entered" from="DetectorJugador" to="." method="_on_DetectorJugador_body_entered"]

@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/Enemies/cloud.png" type="Texture" id=1]
+[ext_resource path="res://game/enemies/Cloud.gd" type="Script" id=2]
+[ext_resource path="res://game/enemies/Lightning.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/sfx/rayos.wav" type="AudioStream" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "trasladarse"
+length = 4.0
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.001, 1, 2, 3, 4 ),
+"transitions": PoolRealArray( 0.353554, 1, 2.82843, 0.15932, 2.54912, 0.203063 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 300, 0 ), Vector2( 600, 0 ), Vector2( 0, 0 ), Vector2( 300, 0 ) ]
+}
+
+[node name="Cloud" type="Node2D" groups=[
+"daño",
+]]
+script = ExtResource( 2 )
+rayo = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 149.85, 0 )
+scale = Vector2( 1.5, 1.5 )
+z_index = 50
+z_as_relative = false
+texture = ExtResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Sprite"]
+enabled = true
+cast_to = Vector2( 0, 500 )
+collision_mask = 2
+
+[node name="posicionDisparo" type="Position2D" parent="Sprite"]
+position = Vector2( -10.4415, 36.9426 )
+scale = Vector2( 0.666667, 0.666667 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "trasladarse"
+anims/trasladarse = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Rayos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

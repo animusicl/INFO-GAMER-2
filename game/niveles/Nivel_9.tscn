@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/platform/small_platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/platform/platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/platform/big_platform.tscn" type="PackedScene" id=5]
+
+[node name="Nivel_9" instance=ExtResource( 1 )]
+nivel_actual = "res://game/niveles/Nivel_9.tscn"
+
+[node name="platform" parent="RegularPlatforms" index="0" instance=ExtResource( 4 )]
+position = Vector2( 3199.08, 559.842 )
+es_movediza = true
+
+[node name="small_platform" parent="ShortPlatforms" index="0" instance=ExtResource( 2 )]
+position = Vector2( 2589.07, 203.77 )
+
+[node name="big_platform" parent="LargePlatforms" index="0" instance=ExtResource( 5 )]
+position = Vector2( 1883.79, 234.932 )
+
+[node name="big_platform2" parent="LargePlatforms" index="1" instance=ExtResource( 5 )]
+position = Vector2( 2490.48, 536.606 )
+
+[node name="MainCharacter" parent="." index="12"]
+position = Vector2( 1701.69, 152.391 )

@@ -1,0 +1,193 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://game/niveles/NivelBase.tscn" type="PackedScene" id=1]
+[ext_resource path="res://game/platform/big_platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/platform/small_platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://game/platform/platform.tscn" type="PackedScene" id=4]
+[ext_resource path="res://game/objetos/GoldCoin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://game/sky/big_sky_platform.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/platform/TrickyPlatform.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game/objetos/Pinchos.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/objetos/Key.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/objetos/SpringPlatform.tscn" type="PackedScene" id=10]
+[ext_resource path="res://game/objetos/SilverCoin.tscn" type="PackedScene" id=11]
+[ext_resource path="res://game/enemies/Spikeman.tscn" type="PackedScene" id=12]
+[ext_resource path="res://game/objetos/Portal.tscn" type="PackedScene" id=13]
+[ext_resource path="res://game/objetos/PowerUp/PowerUpJump.tscn" type="PackedScene" id=14]
+
+[node name="Nivel_6" instance=ExtResource( 1 )]
+nivel_actual = "res://game/niveles/Nivel_6.tscn"
+
+[node name="platform" parent="RegularPlatforms" index="0" instance=ExtResource( 4 )]
+position = Vector2( 128.532, 689.477 )
+
+[node name="platform2" parent="RegularPlatforms" index="1" instance=ExtResource( 4 )]
+position = Vector2( 448.424, 988.84 )
+
+[node name="platform3" parent="RegularPlatforms" index="2" instance=ExtResource( 4 )]
+position = Vector2( 719.979, 665.303 )
+
+[node name="platform4" parent="RegularPlatforms" index="3" instance=ExtResource( 4 )]
+position = Vector2( 1116.28, 417.834 )
+
+[node name="platform5" parent="RegularPlatforms" index="4" instance=ExtResource( 4 )]
+position = Vector2( 1635.3, 411.495 )
+
+[node name="platform6" parent="RegularPlatforms" index="5" instance=ExtResource( 4 )]
+position = Vector2( 2104.11, 411.267 )
+
+[node name="platform7" parent="RegularPlatforms" index="6" instance=ExtResource( 4 )]
+position = Vector2( 2613.83, 391.673 )
+
+[node name="platform8" parent="RegularPlatforms" index="7" instance=ExtResource( 4 )]
+position = Vector2( 3054.72, 252.514 )
+
+[node name="small_platform2" parent="ShortPlatforms" index="0" instance=ExtResource( 3 )]
+position = Vector2( 3037.79, -225.898 )
+
+[node name="small_platform3" parent="ShortPlatforms" index="1" instance=ExtResource( 3 )]
+position = Vector2( 5143.78, 306.257 )
+
+[node name="big_platform" parent="LargePlatforms" index="0" instance=ExtResource( 2 )]
+position = Vector2( 1473.21, 834.137 )
+
+[node name="big_platform2" parent="LargePlatforms" index="1" instance=ExtResource( 2 )]
+position = Vector2( 3840.61, 439.621 )
+
+[node name="big_sky_platform" parent="LargePlatforms" index="2" instance=ExtResource( 6 )]
+position = Vector2( 3939.17, -150.401 )
+
+[node name="big_platform3" parent="LargePlatforms" index="3" instance=ExtResource( 2 )]
+position = Vector2( 2431.83, 834.137 )
+
+[node name="SpringPlatform" parent="SpringPlatforms" index="0" instance=ExtResource( 10 )]
+position = Vector2( 438.332, 964.838 )
+
+[node name="TrickyPlatform" parent="SpringPlatforms" index="1" instance=ExtResource( 7 )]
+position = Vector2( 2712.81, -39.8587 )
+
+[node name="TrickyPlatform2" parent="SpringPlatforms" index="2" instance=ExtResource( 7 )]
+position = Vector2( 4729.83, 309.813 )
+
+[node name="Spikeman" parent="Enemies" index="0" instance=ExtResource( 12 )]
+position = Vector2( 3916.27, -216.953 )
+
+[node name="Pinchos" parent="Damage" index="0" instance=ExtResource( 8 )]
+position = Vector2( 1118.7, 447.124 )
+es_trampa = true
+
+[node name="Pinchos4" parent="Damage" index="1" instance=ExtResource( 8 )]
+position = Vector2( 1343.13, 806.761 )
+
+[node name="Pinchos5" parent="Damage" index="2" instance=ExtResource( 8 )]
+position = Vector2( 1845.24, 805.034 )
+
+[node name="Pinchos6" parent="Damage" index="3" instance=ExtResource( 8 )]
+position = Vector2( 3423.79, 412.426 )
+
+[node name="Pinchos10" parent="Damage" index="4" instance=ExtResource( 8 )]
+position = Vector2( 3929.3, 414.286 )
+
+[node name="Pinchos7" parent="Damage" index="5" instance=ExtResource( 8 )]
+position = Vector2( 3659.9, 412.701 )
+
+[node name="Pinchos8" parent="Damage" index="6" instance=ExtResource( 8 )]
+position = Vector2( 4155.36, 415.136 )
+
+[node name="Pinchos2" parent="Damage" index="7" instance=ExtResource( 8 )]
+position = Vector2( 1635.93, 435.333 )
+es_trampa = true
+
+[node name="Pinchos3" parent="Damage" index="8" instance=ExtResource( 8 )]
+position = Vector2( 2105.44, 436.59 )
+es_trampa = true
+
+[node name="Pinchos11" parent="Damage" index="9" instance=ExtResource( 8 )]
+position = Vector2( 2319.59, 806.811 )
+
+[node name="Pinchos12" parent="Damage" index="10" instance=ExtResource( 8 )]
+position = Vector2( 2653.24, 805.498 )
+
+[node name="SilverCoin" parent="Coins" index="0" instance=ExtResource( 11 )]
+position = Vector2( 1155.57, 782.283 )
+
+[node name="SilverCoin3" parent="Coins" index="1" instance=ExtResource( 11 )]
+position = Vector2( 1503.78, 792.385 )
+
+[node name="SilverCoin4" parent="Coins" index="2" instance=ExtResource( 11 )]
+position = Vector2( 1636.86, 785.764 )
+
+[node name="SilverCoin5" parent="Coins" index="3" instance=ExtResource( 11 )]
+position = Vector2( 1573.84, 737.051 )
+
+[node name="SilverCoin6" parent="Coins" index="4" instance=ExtResource( 11 )]
+position = Vector2( 2065.11, 701.822 )
+
+[node name="SilverCoin2" parent="Coins" index="5" instance=ExtResource( 11 )]
+position = Vector2( 1073.63, 780.038 )
+
+[node name="GoldenCoin" parent="Coins" index="6" instance=ExtResource( 5 )]
+position = Vector2( 3575.18, 381.836 )
+
+[node name="GoldenCoin2" parent="Coins" index="7" instance=ExtResource( 5 )]
+position = Vector2( 3504.62, 383.178 )
+
+[node name="GoldenCoin3" parent="Coins" index="8" instance=ExtResource( 5 )]
+position = Vector2( 3745.96, 390.208 )
+
+[node name="GoldenCoin4" parent="Coins" index="9" instance=ExtResource( 5 )]
+position = Vector2( 3835.54, 390.926 )
+
+[node name="GoldenCoin8" parent="Coins" index="10" instance=ExtResource( 5 )]
+position = Vector2( 4010.4, 396.265 )
+
+[node name="GoldenCoin6" parent="Coins" index="11" instance=ExtResource( 5 )]
+position = Vector2( 4081.98, 395.594 )
+
+[node name="GoldenCoin7" parent="Coins" index="12" instance=ExtResource( 5 )]
+position = Vector2( 4043.41, 333.095 )
+
+[node name="GoldenCoin5" parent="Coins" index="13" instance=ExtResource( 5 )]
+position = Vector2( 3793.1, 321.093 )
+
+[node name="SilverCoin8" parent="Coins" index="14" instance=ExtResource( 11 )]
+position = Vector2( 2107.46, 778.92 )
+
+[node name="SilverCoin9" parent="Coins" index="15" instance=ExtResource( 11 )]
+position = Vector2( 2454.31, 792.393 )
+
+[node name="SilverCoin10" parent="Coins" index="16" instance=ExtResource( 11 )]
+position = Vector2( 2546.21, 790.666 )
+
+[node name="SilverCoin11" parent="Coins" index="17" instance=ExtResource( 11 )]
+position = Vector2( 2496.66, 732.514 )
+
+[node name="SilverCoin12" parent="Coins" index="18" instance=ExtResource( 11 )]
+position = Vector2( 2739.04, 783.024 )
+
+[node name="SilverCoin13" parent="Coins" index="19" instance=ExtResource( 11 )]
+position = Vector2( 2809.1, 780.176 )
+
+[node name="SilverCoin14" parent="Coins" index="20" instance=ExtResource( 11 )]
+position = Vector2( 2025.52, 776.675 )
+
+[node name="Key" parent="Keys" index="0" instance=ExtResource( 9 )]
+position = Vector2( 707.781, 577.938 )
+
+[node name="Key2" parent="Keys" index="1" instance=ExtResource( 9 )]
+position = Vector2( 3021.63, -360.05 )
+
+[node name="Key3" parent="Keys" index="2" instance=ExtResource( 9 )]
+position = Vector2( 4710.23, 170.888 )
+
+[node name="PowerUp" type="Node" parent="." index="11"]
+
+[node name="PowerUpJump" parent="PowerUp" index="0" instance=ExtResource( 14 )]
+position = Vector2( 4259.87, 380.073 )
+
+[node name="Portal" parent="." index="12" instance=ExtResource( 13 )]
+position = Vector2( 5136.67, 63.6176 )
+proximo_nivel = "res://game/niveles/Nivel_7.tscn"
+
+[node name="MainCharacter" parent="." index="14"]
+position = Vector2( 110.482, 610.871 )

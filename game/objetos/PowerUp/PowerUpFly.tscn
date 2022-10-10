@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Items/powerup_wings.png" type="Texture" id=1]
+[ext_resource path="res://game/objetos/PowerUp/PowerUpBase.tscn" type="PackedScene" id=2]
+[ext_resource path="res://game/objetos/PowerUpFly.gd" type="Script" id=3]
+
+[node name="PowerUpFly" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 1 )
